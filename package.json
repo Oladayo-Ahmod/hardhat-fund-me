@@ -9,7 +9,8 @@
   "author": "oladayo ahmod",
   "license": "MIT",
   "devDependencies": {
-    "hardhat": "^2.9.9"
+    "hardhat": "^2.9.9",
+    "hardhat-deploy": "^0.11.11"
   },
   "dependencies": {
     "@chainlink/contracts": "^0.4.1"
