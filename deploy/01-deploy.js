@@ -1,7 +1,7 @@
  const {networkConfig} = require('../hardhat-helper-config')
  const {network} = require("hardhat")
 module.exports = async ({getNamedAccounts,deployments})=>{
-    const {deploy,logs} = deployments
+    const {deploy,log} = deployments
     const {deployer} = await getNamedAccounts()
     const chainId = network.config.chainId
 

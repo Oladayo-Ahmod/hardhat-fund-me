@@ -1,9 +1,18 @@
 const {network} = require("hardhat")
-const {networkConfig} = require("../hardhat-helper-config")
-
+const {develomentChains} = require("../hardhat-helper-config")
 module.exports = async ({getNamedAccounts,deployments})=>{
-    const {deploy,logs} = deployments
+    const {deploy,log} = deployments
     const {deployer} = await getNamedAccounts()
     const chainId = network.config.chainId
+    
+    if(chainId.includes(develomentChains)){
+        log("local network detected !, deploying mocks")
+        await deploy("MockV3Aggregator",{
+            contract : "MockV3Aggregator",
+            from : deployer,
+            log : true,
+            args
+        })
+    }
 
 }

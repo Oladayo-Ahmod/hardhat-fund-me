@@ -9,6 +9,8 @@ const networkConfig = {
     }
 }
 
+const develomentChains = ["localhost","hardhar"]
 module.exports = {
-    networkConfig
+    networkConfig,
+    develomentChains
 }
