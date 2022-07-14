@@ -43,7 +43,8 @@ module.exports = {
       url: process.env.RINKBY_RPC_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-        chainId : 42
+        chainId : 4,
+        blockConfirmations : 6
     },
   },
   gasReporter: {
