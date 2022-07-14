@@ -1,5 +1,5 @@
 const {network} = require("hardhat")
-const {develomentChains} = require("../hardhat-helper-config")
+const {develomentChains, DECIMALS, INITIAL_ANSWER} = require("../hardhat-helper-config")
 module.exports = async ({getNamedAccounts,deployments})=>{
     const {deploy,log} = deployments
     const {deployer} = await getNamedAccounts()
@@ -11,7 +11,7 @@ module.exports = async ({getNamedAccounts,deployments})=>{
             contract : "MockV3Aggregator",
             from : deployer,
             log : true,
-            args
+            args : DECIMALS,INITIAL_ANSWER
         })
     }
 
