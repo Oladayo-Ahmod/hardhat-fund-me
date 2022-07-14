@@ -32,6 +32,11 @@ module.exports = {
       }
     ]
   },
+  namedAccounts: {
+    deployer: {
+        default: 0, // here this will by default take the first account as deployer
+    },
+  },
   networks: {
     ropsten: {
       url: process.env.ROPSTEN_URL || "",
