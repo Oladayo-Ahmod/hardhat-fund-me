@@ -7,7 +7,8 @@ module.exports = async ({getNamedAccounts,deployments})=>{
 
     let ethUsdPricefeedAddress
     if (develomentChains.includes(network.name)) {
-        ethUsdPricefeedAddress = await deployments.get("MockV3Aggregator").address
+        ethUsdPricefeedAggregator = await deployments.get("MockV3Aggregator")
+        ethUsdPricefeedAddress = ethUsdPricefeedAggregator.address
     }
     else{
         ethUsdPricefeedAddress = networkConfig[chainId]["ethUsdPricefeed"]

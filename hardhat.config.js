@@ -38,15 +38,19 @@ module.exports = {
     },
   },
   networks: {
-    ropsten: {
-      url: process.env.ROPSTEN_URL || "",
+    rinkeby: {
+      url: process.env.RINKBY_RPC_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
   },
   gasReporter: {
-    enabled: process.env.REPORT_GAS !== undefined,
-    currency: "USD",
+      enable : false,
+      noColors : true,
+      outputFile : 'gas-fee-report.txt',
+      currency : "USD",
+      coinmarketcap : process.env.COINMARKET_API_KEY,
+
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
