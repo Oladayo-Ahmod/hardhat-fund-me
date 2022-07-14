@@ -37,11 +37,13 @@ module.exports = {
         default: 0, // here this will by default take the first account as deployer
     },
   },
+  defaultNetwork : "hardhat",
   networks: {
     rinkeby: {
       url: process.env.RINKBY_RPC_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+        chainId : 42
     },
   },
   gasReporter: {
