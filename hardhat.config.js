@@ -31,7 +31,7 @@ module.exports = {
         version : "0.6.6"
       }
     ]
-  }
+  },
   networks: {
     ropsten: {
       url: process.env.ROPSTEN_URL || "",
