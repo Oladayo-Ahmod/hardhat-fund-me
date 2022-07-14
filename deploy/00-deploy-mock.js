@@ -13,6 +13,8 @@ module.exports = async ({getNamedAccounts,deployments})=>{
             log : true,
             args : DECIMALS,INITIAL_ANSWER
         })
+        log('deployed successfully!')
+        log('------------------BADDEST---------BLOCKCHAIN-----------DEVELOPER-------------------------------')
     }
 
 }
