@@ -6,6 +6,7 @@ module.exports = async ({getNamedAccounts,deployments})=>{
     const {deploy,log} = deployments
     const {deployer} = await getNamedAccounts()
     const chainId = network.config.chainId
+    // console.log(networkConfig)
 
     let ethUsdPricefeedAddress
     if (develomentChains.includes(network.name)) {
@@ -14,8 +15,8 @@ module.exports = async ({getNamedAccounts,deployments})=>{
     }
     else{
         ethUsdPricefeedAddress = networkConfig[chainId]["ethUsdPricefeed"]
+        console.log(ethUsdPricefeedAddress)
     }
-
     const args = [ethUsdPricefeedAddress]
     const Fundme = await deploy("FundMe",{
         from : deployer,

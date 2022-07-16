@@ -20,6 +20,8 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
+ console.log(process.env.RINKBY_RPC_URL)
+
 module.exports = {
   // solidity: "0.8.8",
   solidity : {
